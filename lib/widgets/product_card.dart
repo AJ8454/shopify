@@ -4,10 +4,14 @@ import 'package:shopify/models/product_model.dart';
 class ProductCard extends StatelessWidget {
   final Product product;
   final double widthFactor;
+  final double leftPosition;
+  final bool isWishList;
   const ProductCard({
     Key? key,
     required this.product,
     this.widthFactor = 2.5,
+    this.leftPosition = 5,
+    this.isWishList = false,
   }) : super(key: key);
 
   @override
@@ -39,12 +43,12 @@ class ProductCard extends StatelessWidget {
           // ),
           Positioned(
             top: 65,
-            left: 5,
+            left: leftPosition + 5,
             child: Container(
-              width: widthValue - 10,
+              width: widthValue - 15 - leftPosition,
               height: 70,
-              decoration: const BoxDecoration(
-                color: Colors.black,
+              decoration: BoxDecoration(
+                color: Colors.black.withAlpha(120),
               ),
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -83,6 +87,17 @@ class ProductCard extends StatelessWidget {
                         onPressed: () {},
                       ),
                     ),
+                    isWishList
+                        ? Expanded(
+                            child: IconButton(
+                              icon: const Icon(
+                                Icons.delete,
+                                color: Colors.white,
+                              ),
+                              onPressed: () {},
+                            ),
+                          )
+                        : const SizedBox.shrink(),
                   ],
                 ),
               ),

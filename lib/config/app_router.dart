@@ -1,7 +1,7 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:shopify/models/category_model.dart';
+import 'package:shopify/models/models.dart';
 import 'package:shopify/screens/cart/cart_screen.dart';
 import 'package:shopify/screens/catalog/catalog_screen.dart';
 import 'package:shopify/screens/home/home_screen.dart';
@@ -22,7 +22,7 @@ class AppRouter {
       case CatalogScreen.routeName:
         return CatalogScreen.route(category: settings.arguments as Category);
       case ProductScreen.routeName:
-        return ProductScreen.route();
+        return ProductScreen.route(product: settings.arguments as Product);
       case WishListScreen.routeName:
         return WishListScreen.route();
 
