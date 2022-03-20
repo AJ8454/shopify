@@ -46,19 +46,36 @@ class Product extends Equatable {
       isPopular: false,
     ),
     Product(
-      name: "Dawat Basmati Rice",
-      category: "Grocery",
+      name: "Coca Cola",
+      category: "Soft Drinks",
       imageUrl:
-          "https://cdn.shopify.com/s/files/1/0033/9306/0909/products/dawat_basmati_rice_1194x.jpg?v=1626404394",
+          "https://www.conchovalleyhomepage.com/wp-content/uploads/sites/83/2021/12/GettyImages-1005364128.jpg?w=900",
+      price: 62.05,
+      isRecommended: true,
+      isPopular: false,
+    ),
+    Product(
+      name: "Sprite",
+      category: "Soft Drinks",
+      imageUrl: "https://m.media-amazon.com/images/I/51AniJpRujL._SX522_.jpg",
+      price: 40.00,
+      isRecommended: true,
+      isPopular: false,
+    ),
+    Product(
+      name: "Lady Finger",
+      category: "Vegetables",
+      imageUrl:
+          "https://images.indianexpress.com/2021/08/bhindi_1200_getty.jpg",
       price: 999.99,
       isRecommended: true,
       isPopular: true,
     ),
     Product(
-      name: "Biryani Masal",
-      category: "Grocery",
+      name: "Broccoli",
+      category: "Vegetables",
       imageUrl:
-          "https://www.belaamie.com/wp-content/uploads/2020/10/Deshi-Biryani-Masala.jpg",
+          "https://miro.medium.com/max/1400/1*0h19diyBx5Ni3LaS2UifCA.jpeg",
       price: 40.00,
       isRecommended: true,
       isPopular: false,
@@ -74,7 +91,7 @@ class Product extends Equatable {
     ),
     Product(
       name: "Jeans & suits",
-      category: "Soft Drinks",
+      category: "Clothes",
       imageUrl:
           "https://www.suitsexpert.com/wp-content/uploads/2020/02/mens-dress-code-types-guide-scaled.jpg",
       price: 5500.40,

@@ -11,20 +11,23 @@ class ProductCarousel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 150,
-      child: ListView.builder(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 20.0,
-          vertical: 10.0,
-        ),
-        shrinkWrap: true,
-        scrollDirection: Axis.horizontal,
-        itemCount: products.length,
-        itemBuilder: (context, index) => Padding(
-          padding: const EdgeInsets.only(right: 5.0),
-          child: ProductCard(
-            product: Product.products[index],
+    return Align(
+      alignment: Alignment.topLeft,
+      child: SizedBox(
+        height: 150,
+        child: ListView.builder(
+          padding: const EdgeInsets.symmetric(
+            horizontal: 20.0,
+            vertical: 10.0,
+          ),
+          shrinkWrap: true,
+          scrollDirection: Axis.horizontal,
+          itemCount: products.length,
+          itemBuilder: (context, index) => Padding(
+            padding: const EdgeInsets.only(right: 5.0),
+            child: ProductCard(
+              product: Product.products[index],
+            ),
           ),
         ),
       ),
