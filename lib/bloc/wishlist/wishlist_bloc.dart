@@ -7,17 +7,17 @@ part 'wishlist_event.dart';
 part 'wishlist_state.dart';
 
 class WishlistBloc extends Bloc<WishlistEvent, WishlistState> {
-  WishlistBloc() : super(WishlistLoading()) {
-    // ignore: void_checks
-    on<WishlistEvent>((event, emit) async* {
-      if (event is StartWishlist) {
-        yield* _mapStartWishlistToState();
-      } else if (event is AddWishlistProduct) {
-        yield* _mapAddWishlistProductState(event, state);
-      } else if (event is RemoveWishlistProduct) {
-        yield* _mapRemoveWishlistProductState(event, state);
-      }
-    });
+  WishlistBloc() : super(WishlistLoading());
+
+  @override
+  Stream<WishlistState> mapEventToState(WishlistEvent event) async* {
+    if (event is StartWishlist) {
+      yield* _mapStartWishlistToState();
+    } else if (event is AddWishlistProduct) {
+      yield* _mapAddWishlistProductState(event, state);
+    } else if (event is RemoveWishlistProduct) {
+      yield* _mapRemoveWishlistProductState(event, state);
+    }
   }
 
   Stream<WishlistState> _mapStartWishlistToState() async* {

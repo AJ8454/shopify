@@ -35,8 +35,8 @@ class WishListScreen extends StatelessWidget {
                   const EdgeInsets.symmetric(horizontal: 8.0, vertical: 16.0),
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 1,
-                mainAxisSpacing: 5,
-                childAspectRatio: 2.2,
+                // mainAxisSpacing: 5,
+                childAspectRatio: 2.4,
               ),
               itemCount: state.wishList.products.length,
               itemBuilder: (BuildContext context, int index) {
@@ -44,7 +44,7 @@ class WishListScreen extends StatelessWidget {
                   child: ProductCard(
                     product: state.wishList.products[index],
                     widthFactor: 1.1,
-                    leftPosition: 30,
+                    leftPosition: 100,
                     isWishList: true,
                   ),
                 );
