@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shopify/models/category_model.dart';
 import 'package:shopify/models/models.dart';
 
 class HeroCarouselCard extends StatelessWidget {
