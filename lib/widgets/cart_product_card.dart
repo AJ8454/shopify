@@ -5,9 +5,12 @@ import 'package:shopify/models/product_model.dart';
 
 class CartProductCard extends StatelessWidget {
   final Product? product;
+  final int quantity;
   const CartProductCard({
     Key? key,
     required this.product,
+    required this. quantity,
+  
   }) : super(key: key);
 
   @override
@@ -51,7 +54,7 @@ class CartProductCard extends StatelessWidget {
                     },
                   ),
                   Text(
-                    '1',
+                    '$quantity',
                     style: Theme.of(context).textTheme.headline5,
                   ),
                   IconButton(

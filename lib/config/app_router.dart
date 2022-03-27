@@ -6,6 +6,7 @@ import 'package:shopify/screens/cart/cart_screen.dart';
 import 'package:shopify/screens/catalog/catalog_screen.dart';
 import 'package:shopify/screens/home/home_screen.dart';
 import 'package:shopify/screens/product/product_screen.dart';
+import 'package:shopify/screens/splash/splash_screen.dart';
 import 'package:shopify/screens/wishlist/wishlist_screen.dart';
 
 class AppRouter {
@@ -13,8 +14,8 @@ class AppRouter {
     log("This is route: ${settings.name}");
 
     switch (settings.name) {
-      // case '/':
-      //   return HomeScreen.route();
+      case SplashScreen.routeName:
+        return SplashScreen.route();
       case HomeScreen.routeName:
         return HomeScreen.route();
       case CartScreen.routeName:
