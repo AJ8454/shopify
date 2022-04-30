@@ -27,7 +27,9 @@ class CatalogScreen extends StatelessWidget {
         .toList();
     return Scaffold(
       appBar: CustomAppBar(title: category.name),
-      bottomNavigationBar: const CustomNavigationBar(),
+      bottomNavigationBar: const CustomNavigationBar(
+        screen: routeName,
+      ),
       body: GridView.builder(
         padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 16.0),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:shopify/models/models.dart';
 import 'package:shopify/screens/cart/cart_screen.dart';
 import 'package:shopify/screens/catalog/catalog_screen.dart';
+import 'package:shopify/screens/checkout/checkout_screen.dart';
 import 'package:shopify/screens/home/home_screen.dart';
 import 'package:shopify/screens/product/product_screen.dart';
 import 'package:shopify/screens/splash/splash_screen.dart';
@@ -26,6 +27,8 @@ class AppRouter {
         return ProductScreen.route(product: settings.arguments as Product);
       case WishListScreen.routeName:
         return WishListScreen.route();
+       case CheckoutScreen.routeName:
+        return CheckoutScreen.route();
 
       default:
         return _errorRoute();

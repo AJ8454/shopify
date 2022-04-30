@@ -24,7 +24,9 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(title: "Shopify"),
-      bottomNavigationBar: const CustomNavigationBar(),
+      bottomNavigationBar: const CustomNavigationBar(
+        screen: routeName,
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [

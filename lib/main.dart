@@ -9,13 +9,14 @@ import 'package:shopify/config/app_router.dart';
 import 'package:shopify/config/theme.dart';
 import 'package:shopify/repositories/category/category_repository.dart';
 import 'package:shopify/repositories/product/product_repository.dart';
-import 'package:shopify/screens/splash/splash_screen.dart';
+import 'package:shopify/screens/screens.dart';
+import 'package:shopify/simple_bloc_observer.dart';
 
 // video no 18
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  // Bloc.observer = SimpleBlocObsever();
+  Bloc.observer = SimpleBlocObserver();
   runApp(const MyApp());
 }
 

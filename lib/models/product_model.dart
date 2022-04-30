@@ -5,7 +5,7 @@ class Product extends Equatable {
   final String? name;
   final String? category;
   final String? imageUrl;
-  final String? price;
+  final double? price;
   final bool? isRecommended;
   final bool? isPopular;
 
@@ -23,7 +23,7 @@ class Product extends Equatable {
       name: snap['name'],
       category: snap['category'],
       imageUrl: snap['imageUrl'],
-      price: snap['price'],
+      price: double.parse('${snap['price']}'),
       isPopular: snap['isPopular'],
       isRecommended: snap['isRecommended'],
     );
