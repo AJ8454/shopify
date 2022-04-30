@@ -1,6 +1,5 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:shopify/models/cart_model.dart';
 import 'package:shopify/models/models.dart';
 
 part 'cart_event.dart';
