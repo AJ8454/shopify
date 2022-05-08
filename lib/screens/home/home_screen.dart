@@ -23,7 +23,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: "Shopify"),
+      appBar: CustomAppBar(title: "Shopify", leadingicon: true),
       bottomNavigationBar: const CustomNavigationBar(
         screen: routeName,
       ),

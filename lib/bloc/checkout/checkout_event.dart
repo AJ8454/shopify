@@ -41,7 +41,7 @@ class ConfirmCheckout extends CheckoutEvent {
   final Checkout? checkout;
 
   const ConfirmCheckout({
-    this.checkout,
+    this.checkout
   });
 
   @override

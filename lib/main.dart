@@ -28,23 +28,23 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: (_) => WishlistBloc()..add(StartWishlist())),
+        BlocProvider(create: (context) => CartBloc()..add(CartStarted())),
         BlocProvider(
-            create: (_) => CheckoutBloc(
+            create: (context) => CheckoutBloc(
                   cartBloc: context.read<CartBloc>(),
                   checkoutRepository: CheckoutRepository(),
                 )),
-        BlocProvider(create: (_) => CartBloc()..add(CartStarted())),
+        BlocProvider(create: (context) => WishlistBloc()..add(StartWishlist())),
         BlocProvider(
-          create: (_) => CategoryBloc(
+          create: (context) => CategoryBloc(
             categoryRepository: CategoryRepository(),
           )..add(LoadCategories()),
         ),
         BlocProvider(
-          create: (_) => ProductBloc(
+          create: (context) => ProductBloc(
             productRepository: ProductRepository(),
           )..add(LoadProduct()),
-        )
+        ),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

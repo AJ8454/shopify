@@ -2,14 +2,17 @@ import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
   final String? title;
+  final bool leadingicon;
   CustomAppBar({
     Key? key,
     required this.title,
+    this.leadingicon = false,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      leading: leadingicon ? null : const BackButton(),
       backgroundColor: Colors.transparent,
       elevation: 0.0,
       centerTitle: true,
